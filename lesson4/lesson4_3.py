@@ -1,4 +1,4 @@
-# 4.3 模擬非同步網路請求
+# lesson4_3 模擬非同步網路請求
 import asyncio
 import time
 
