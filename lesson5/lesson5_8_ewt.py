@@ -4,8 +4,8 @@ from crawl4ai.extraction_strategy import JsonCssExtractionStrategy
 import json
 
 def process_data(datas):
-     for item in datas:
-            print(item)
+    for data in datas:
+        print(item)
 
 
 async def main():
@@ -56,8 +56,12 @@ async def main():
             url=url,
             config=run_config
         )
-        datas = json.loads(result.extracted_content)
-        process_data(datas) 
+        datas=json.loads(result.extracted_content)
+        # print(datas)
+        process_data(datas)
+        # print(type(result.extracted_content)) 
+        # print(result.extracted_content)
+        
 
 if __name__ == "__main__":
     asyncio.run(main())
