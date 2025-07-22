@@ -14,7 +14,7 @@ async def main():
         </div>
     </body>
     </html>"""
-    url="https://ec.ltn.com.tw/article/breakingnews/5116520"
+    url="https://ec.ltn.com.tw/article/breakingnews/5116126"
     schema = {
         "name":"範例項目",
         "baseSelector":"[data-desc='內文']",
