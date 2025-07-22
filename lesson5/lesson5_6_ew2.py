@@ -21,12 +21,12 @@ async def main():
 ''        "fields":[
             {
                 "name":"標題",
-                "selector":"id=MainContent_Contents_lbTitle",
+                "selector":"#MainContent_Contents_lbTitle",
                 "type":"text"
             },
             {
                 "name":"時間",
-                "selector":"id=MainContent_Contents_lbDate",
+                "selector":"#MainContent_Contents_lbDate",
                 "type":"text"
             }
         ]
