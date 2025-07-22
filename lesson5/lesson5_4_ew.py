@@ -29,11 +29,10 @@ async def main():
                 config=run_config
                 )
         print(type(result))
-        print("=")
+        print("=" * 20)
         #列印取出的結果
         print(result.markdown)
-        print("n"*40)
-        print(result.markdown.raw_markdown[:200])
+      
 
 if __name__ == "__main__":
     #使用 asyncio.run() 來執行 main 函數

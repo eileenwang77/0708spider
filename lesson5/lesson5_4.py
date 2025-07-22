@@ -13,7 +13,7 @@ async def main():
                 threshold_type = "fixed",
                 min_word_threshold = 50  # 最少字數要求
             )
-        ),
+            ),
         # 移除不必要的元素
         excluded_tags=['nav', 'footer', 'header', 'aside', 'form'],
         # 專門針對文章內容的CSS選擇器（可選）
