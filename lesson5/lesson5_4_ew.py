@@ -2,7 +2,7 @@ import asyncio
 from crawl4ai import (AsyncWebCrawler,
                       CrawlerRunConfig,
                       DefaultMarkdownGenerator,
-                      PruningConfigFilter)
+                      PruningContentFilter)
 
 
 async def main():
@@ -10,7 +10,7 @@ async def main():
     run_config = CrawlerRunConfig( 
             markdown_generator=DefaultMarkdownGenerator(
                 #設定Markdown生成器的配置
-                content_filter=PruningConfigFilter(
+                content_filter=PruningContentFilter(
                     threshold=0.5,
                     threshold_type='fixed',
                     min_word_count=50)
