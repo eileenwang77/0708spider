@@ -1,9 +1,8 @@
 import wantgoo
 import asyncio
-import twstock
 
 def main():
-        urls = [
+    urls = [
         "https://www.wantgoo.com/stock/2330/technical-chart",
         "https://www.wantgoo.com/stock/2317/technical-chart",
         "https://www.wantgoo.com/stock/2454/technical-chart",
@@ -15,14 +14,9 @@ def main():
         "https://www.wantgoo.com/stock/2337/technical-chart",
         "https://www.wantgoo.com/stock/2882/technical-chart",
     ]
-    results:list[dict] = asyncio.run(get_stock_data(urls=urls))
-    for stock in results:
+    reuslts:list[dict] = asyncio.run(wantgoo.get_stock_data(urls=urls))
+    for stock in reuslts:
         print(stock)
 
-if __name__ == '__main__':
-    # main()
-    for item in get_stocks_with_twstock():
-        if item['code'] == '2330':
-            print(item)
-
-# This code is part of a web scraping project using the WantGoo website.
+if __name__ == "__main__":
+    main()
