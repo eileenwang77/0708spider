@@ -13,14 +13,20 @@ async def main():
         "https://www.wantgoo.com/stock/2330/technical-chart",
         "https://www.wantgoo.com/stock/2317/technical-chart",
         "https://www.wantgoo.com/stock/5434/technical-chart",
-        "https://www.wantgoo.com/stock/2303/technical-chart",
-        "https://www.wantgoo.com/stock/2887/technical-chart",
-        "https://www.wantgoo.com/stock/2884/technical-chart",
-        "https://www.wantgoo.com/stock/2881/technical-chart",
-        "https://www.wantgoo.com/stock/2308/technical-chart",
-        "https://www.wantgoo.com/stock/2337/technical-chart",
-        "https://www.wantgoo.com/stock/2882/technical-chart",
+        "https://www.wantgoo.com/stock/2303/technical-chart"
     ] 
+    # urls = [
+    #     "https://www.wantgoo.com/stock/2330/technical-chart",
+    #     "https://www.wantgoo.com/stock/2317/technical-chart",
+    #     "https://www.wantgoo.com/stock/5434/technical-chart",
+    #     "https://www.wantgoo.com/stock/2303/technical-chart",
+    #     "https://www.wantgoo.com/stock/2887/technical-chart",
+    #     "https://www.wantgoo.com/stock/2884/technical-chart",
+    #     "https://www.wantgoo.com/stock/2881/technical-chart",
+    #     "https://www.wantgoo.com/stock/2308/technical-chart",
+    #     "https://www.wantgoo.com/stock/2337/technical-chart",
+    #     "https://www.wantgoo.com/stock/2882/technical-chart",
+    # ] 
     #建立一個BrowserConfig,讓chromium的瀏覽器顯示
     #BrowserConfig實體
 
