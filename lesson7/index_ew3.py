@@ -19,12 +19,12 @@ class SimpleApp:
         #使用self.stock_codes來建立選項
         #在右邊建立捲動軸
         #下面出現click鈕後, 右邊會出現選擇的股票代號及名稱  
-        self.confirm_button = tk.Button(self.root, text="確定", command=self.on_confirm)
-        self.confirm_button.pack(pady=10)
+        # self.confirm_button = tk.Button(self.root, text="確定", command=self.on_confirm)
+        # self.confirm_button.pack(pady=10)
         self.stock_list = tk.Listbox(self.root, selectmode=tk.MULTIPLE, width=15,height=20)
         self.stock_list.insert(tk.END, "請選擇股票代碼:")   
         for stock in self.stock_codes:
-            self.stock_list.insert(tk.END, f"{stock['code']} - {stock['name']} ({stock['market']})")
+            self.stock_list.insert(tk.END, f"{stock['code']} - {stock['name']} "    )
 
         self.scrollbar = tk.Scrollbar(self.root)
         self.scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
