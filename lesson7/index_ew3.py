@@ -21,6 +21,7 @@ class SimpleApp:
         #下面出現click鈕後, 右邊會出現選擇的股票代號及名稱  
         # self.confirm_button = tk.Button(self.root, text="確定", command=self.on_confirm)
         # self.confirm_button.pack(pady=10)
+        
         self.stock_list = tk.Listbox(self.root, selectmode=tk.MULTIPLE, width=15,height=20)
         self.stock_list.insert(tk.END, "請選擇股票代碼:")   
         for stock in self.stock_codes:
@@ -32,6 +33,14 @@ class SimpleApp:
         self.scrollbar.config(command=self.stock_list.yview)
 
         self.stock_list.pack(pady=10)
+
+        confirm_button = tk.Button(self.root, text="確認", command=self.on_confirm)
+        confirm_button.pack(padx=20, pady=20)
+
+    def on_confirm(self):
+        selected_indices = self.stock_list.curselection()
+        selected_stocks = [self.stock_codes[i] for i in selected_indices]
+        print("選擇的股票:", selected_stocks)
 
 
 if __name__ == "__main__":
