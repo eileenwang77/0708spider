@@ -75,16 +75,20 @@ class SimpleApp:
         """當股票被選取時，更新右側顯示的資訊"""
         self.selected_stocks = [self.stock_listbox.get(i) for i in self.stock_listbox.curselection()]
         print(f"選取的股票: {self.selected_stocks}")
-        self.selected_button.config(text=f"選取的股票數量是:{len(self.selected_stocks)}筆")
+        self.selected_button.config(text=f"爬取的股票數量是:{len(self.selected_stocks)}筆")
         if len(self.selected_stocks) == 0:
             self.selected_button.config(state=tk.DISABLED)
         else:
             self.selected_button.config(state=tk.NORMAL)
 
-
+    #
     def clear_selection(self):
         """清除選取的股票資訊"""
         self.stock_listbox.selection_clear(0, tk.END)
+        self.selected_button.config(text="爬取的股票數量是0筆", state=tk.DISABLED)
+        # self.selected_stocks = []
+
+
 
     
 
