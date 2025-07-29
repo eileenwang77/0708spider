@@ -10,7 +10,7 @@ from crawl4ai import (AsyncWebCrawler,
                       SemaphoreDispatcher,RateLimiter,
                       )
 
-async def get_stock_data(urls:list[str])-> list[dict]:
+async def get_stock_data(urls)-> list[dict]:
     """
     非同步地從一組網址列表抓取股票資料，使用無頭的Chromium瀏覽器。
 
@@ -164,6 +164,6 @@ def get_stocks_with_twstock()->list[dict]:
     
     for item in stock_list:
         # 只找尋股票代碼第1位數為2的股票,只要4個字元
-        if item['code'].startswith('2') and len(item['code']) == 4:
+        if (item['code'].startswith('23') or item['code'].startswith('54')) and len(item['code']) == 4:
             return_list.append(item)
     return return_list
