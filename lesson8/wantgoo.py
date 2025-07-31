@@ -101,6 +101,7 @@ async def get_stock_data(urls:list[str])-> list[dict]:
     }
 
     # 建立一個AsyncWebCrawler的實體，並傳入BrowserConfig實體
+    
     # 這樣可以讓爬蟲等待瀏覽器載入頁面，並且可以在瀏覽器中看到爬蟲的操作，方便除錯
     run_config = CrawlerRunConfig(
         wait_for_images=True,  # 等待圖片載入
@@ -132,7 +133,11 @@ async def get_stock_data(urls:list[str])-> list[dict]:
     all_results:list[dict] = []
     for result in results:
         stack_data:list[dict] = json.loads(result.extracted_content)
-        all_results.append(stack_data[0])
+        # all_results.append(stack_data[0])
+        if stack_data:
+            all_results.append(stack_data[0])
+        else:
+            print(f"Warning: No data found for one of the stocks, skipping.")
 
     return all_results
 
